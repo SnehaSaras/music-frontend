@@ -6,7 +6,8 @@ function App() {
   const [songLink, setSongLink] = useState("");
 
   const handleMoodClick = async (mood) => {
-    const res = await fetch(`http://localhost:5000/song/${mood}`);
+    cconst res = await fetch(`http://backend:5000/song/${mood}`);
+
     const data = await res.json();
     setSongLink(data.link);
   };
